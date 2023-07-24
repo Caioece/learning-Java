@@ -10,6 +10,6 @@ public class Scan{
         System.out.println("seu nome eh: " + nome);
         System.out.println("sua idade eh: " + idade);
         System.out.println("sua matricula eh: " + matricula);
-/* */
+
     }
 }
