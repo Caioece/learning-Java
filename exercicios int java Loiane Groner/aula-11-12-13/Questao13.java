@@ -1,29 +1,30 @@
-/*import java.util.Scanner;
+import java.util.Scanner;
 
 public class Questao13
 {
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Qual eh o seu sexo? ( masc / fem )");
-        String sexo = scan.next();
+        System.out.println("Qual eh o seu sexo? ( masc = 1 / fem = 2 )");
+        int sexo = scan.nextInt();
         System.out.println("Qual eh a sua altura?");
         double altura = scan.nextDouble();
-        if(sexo == "masc")
+        double idealPound = 0;
+        if(sexo == 1)
         {
-            double idealWeight = (72.7 * altura) - 58;
+            idealPound = (72.7 * altura) - 58;
         }
-        else if(sexo == "fem")
+        else if(sexo == 2)
         {
-            double idealWeight = ((62.1*altura) - 44.7);
+            idealPound = (62.1 * altura) - 44.7;
         }
         System.out.println("Qual eh o seu peso?");
         double weight = scan.nextDouble();
-        if(weight > idealWeight)
+        if(weight > idealPound)
         {
             System.out.println("Voce esta acima do peso ideal.");
         }
-        else if(weight == idealWeight)
+        else if(weight == idealPound)
         {
             System.out.println("Voce esta no peso ideal");
         }
@@ -33,4 +34,4 @@ public class Questao13
         }
         
     }
-}*/
+}
