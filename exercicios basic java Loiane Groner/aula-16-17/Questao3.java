@@ -6,6 +6,6 @@ public class Questao3
     {
         Scanner scan = new Scanner(System.in);
         String nome = scan.next();
-        
+        /* teste pull 8?
     }
 }
