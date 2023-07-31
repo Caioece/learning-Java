@@ -33,7 +33,7 @@ public class Questao4
                     {
                         System.out.printf("Hora %d:00", (i));
                     }
-                    for(int j = 0; j < agenda.length ; j++)
+                    for(int j = 0; j < 30 ; j++)
                     {
                         if(i == 0)
                             System.out.printf("\t Dia %d", (j+1));
