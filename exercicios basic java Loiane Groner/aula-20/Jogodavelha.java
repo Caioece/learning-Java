@@ -8,6 +8,7 @@ public class Jogodavelha
         Scanner scan = new Scanner(System.in);
         int jogar = 0;
         int opcao;
+        /*LOOP DE MENU*/
         while(jogar == 0)
         {
             System.out.printf("=== JOGO DA VELHA ===%n");
@@ -21,6 +22,7 @@ public class Jogodavelha
             else if(opcao == 0)
                 jogar = 2;
         }
+        /*variaveis jogo da velha*/
         int jogando = 1;
         String[][] matrix = new String[3][3];
 
@@ -58,6 +60,7 @@ public class Jogodavelha
             int validTurn = 0;
             int linha;
             int coluna;
+            /*LOOP PARA FAZER A JOGADA*/
             do{
                 System.out.printf("JOGADOR %d - DIGITE A LINHA E COLUNA DE SUA JOGADA%n", (turn));
                 linha = scan.nextInt();
@@ -67,6 +70,7 @@ public class Jogodavelha
                 else
                     validTurn = 1;
             }while(validTurn == 0);
+            /*validação da jogada*/
             if(turn == 1)
             {
                 matrix[linha][coluna] = "O";
@@ -91,7 +95,7 @@ public class Jogodavelha
                         ganhador = turn;
                     if(jogando == 1 && rounds == 9)
                     {
-                        jogando = 0 ;
+                        jogando = 0;
                         velha = 1;
                     }
 
@@ -101,6 +105,7 @@ public class Jogodavelha
             else
                 turn = 1;
         }
+        /*PRINT JOGO DA VELHA*/
         if(jogar != 2)
         {
             System.out.printf("                 C0    C1    C2%n");
@@ -127,6 +132,7 @@ public class Jogodavelha
                 } 
             }
             System.out.printf("%n                    |    |%n"); /*ultima linha*/
+            /*RESULTADO DO JOGO*/
             if(velha != 1)
                 System.out.printf("%nJOGADOR %d GANHOU !!%n", (ganhador));
             else
