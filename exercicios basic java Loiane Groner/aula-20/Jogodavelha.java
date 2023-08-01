@@ -128,7 +128,7 @@ public class Jogodavelha
             }
             System.out.printf("%n                    |    |%n"); /*ultima linha*/
             if(velha != 1)
-                System.out.printf("%nJOGADOR %d GANHOU !!", (ganhador));
+                System.out.printf("%nJOGADOR %d GANHOU !!%n", (ganhador));
             else
                 System.out.printf("%nDEU VELHA :( !!%n");
         }
