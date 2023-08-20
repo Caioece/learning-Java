@@ -1,4 +1,6 @@
 import java.util.Random;
+import aula24.Conta;
+
 
 public class Questao1
 {

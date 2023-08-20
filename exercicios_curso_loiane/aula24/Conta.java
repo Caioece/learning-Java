@@ -1,3 +1,5 @@
+package aula24;
+
 public class Conta
 {
     int numero;

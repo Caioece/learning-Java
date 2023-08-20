@@ -142,33 +142,7 @@ public class Jogodavelha
 }
 
 
-void matrixPrint(String[][] matrix)
-{
-    System.out.printf("                 C0    C1    C2%n");
-            System.out.println("                    |    |"); /*primeira linha*/
-            for(int i = 0 ; i < matrix.length ; i++)
-            {
-                int firstTime = 1;
-                for(int j = 0 ; j < matrix.length ; j++)
-                {
-                    if(firstTime == 1)
-                        System.out.printf("          L%d    ", (i));
-                    if(matrix[i][j] == null && j < 2)
-                        System.out.printf("    |");
-                    if(matrix[i][j] != null && j < 2)
-                        System.out.printf(" %s  |", (matrix[i][j]));
-                    else if(matrix[i][j] != null & j==2)
-                        System.out.printf(" %s", (matrix[i][j]));
-                    firstTime = 0;
-                }
-                if(i<2)
-                {
-                    System.out.printf("%n                ____|____|____"); /*linhas com underline*/
-                    System.out.printf("%n                    |    |%n");/*linha pos underline*/
-                } 
-            }
-            System.out.printf("%n                    |    |%n"); /*ultima linha*/
-}
+
 /*
 20 espacos
                     |    |
