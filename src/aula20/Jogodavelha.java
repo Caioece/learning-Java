@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-
-public class Jogodavelha
-{
+public class JogoDaVelha {
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
@@ -17,20 +15,22 @@ public class Jogodavelha
             System.out.printf("DIGITE '1' PARA JOGAR.%n");
             System.out.printf("DIGITE '0' PARA SAIR.%n");
             opcao = scan.nextInt();
-            if(opcao == 1)
+            if(opcao == 1){
                 jogar = 1;
-            else if(opcao == 0)
+            }
+            else if(opcao == 0){
                 jogar = 2;
+            }
         }
         /*variaveis jogo da velha*/
-        int jogando = 1;
         String[][] matrix = new String[3][3];
-
+        int jogando = 1;
         int turn = 1;
         int ganhador = 0;
         int rounds = 0;
         int velha = 0;
         /*printando o jogo da velha*/
+
         while(jogar == 1 && jogando == 1)
         {
             System.out.printf("                 C0    C1    C2%n");
@@ -106,7 +106,32 @@ public class Jogodavelha
                 turn = 1;
         }
         /*PRINT JOGO DA VELHA*/
+        System.out.printf("                 C0    C1    C2%n");
+            System.out.println("                    |    |"); /*primeira linha*/
+            for(int i = 0 ; i < matrix.length ; i++)
+            {
+                int firstTime = 1;
+                for(int j = 0 ; j < matrix.length ; j++)
+                {
+                    if(firstTime == 1)
+                        System.out.printf("          L%d    ", (i));
+                    if(matrix[i][j] == null && j < 2)
+                        System.out.printf("    |");
+                    if(matrix[i][j] != null && j < 2)
+                        System.out.printf(" %s  |", (matrix[i][j]));
+                    else if(matrix[i][j] != null & j==2)
+                        System.out.printf(" %s", (matrix[i][j]));
+                    firstTime = 0;
+                }
+                if(i<2)
+                {
+                    System.out.printf("%n                ____|____|____"); /*linhas com underline*/
+                    System.out.printf("%n                    |    |%n");/*linha pos underline*/
+                } 
+            }
+            System.out.printf("%n                    |    |%n"); /*ultima linha*/
         if(jogar != 2)
+        // if(jogar != 2)
         {
             System.out.printf("                 C0    C1    C2%n");
             System.out.println("                    |    |"); /*primeira linha*/
